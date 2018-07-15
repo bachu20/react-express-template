@@ -1,0 +1,27 @@
+{
+    "name": "project-tembii",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha -r should -R spec"
+    },
+    "author": "Brandon Achu",
+    "license": "ISC",
+    "dependencies": {
+        "caminte": "^0.3.3",
+        "underscore": "^1.8.3",
+        "pg": "latest",
+        "boom": "^4.2.0"
+    },
+    "caminte": {
+        "adapter": "postgres"
+    },
+    "devDependencies": {
+        "mocha": "^3.0.2",
+        "should": "^11.1.0",
+        "supertest": "^2.0.0",
+        "istanbul": "^0.4.5",
+        "jshint": "2.x"
+    }
+}
