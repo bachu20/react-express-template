@@ -1,27 +1,44 @@
-const app = require('express')();
 const bodyParser = require('body-parser');
 const _ = require('lodash');
+const express = require('express');
+const app = express();
 
-const { config } = require('./config');
-const logger = require('./helpers/logger')(__filename);
-// const middleware = require('./middleware');
-const apiRoutes = require('./routes');
+const { 
+  util: { logger: getLogger, jsonApi: { getJsonApi } },
+  middleware,
+  routes,
+  db: { models, sequelize },
+  config
+} = require('./src');
+
+// configure jsonapi
+const jsonApiRouter = new express.Router();
+const jsonApi = getJsonApi(models, { router: jsonApiRouter });
+
+const logger = getLogger(__filename);
+
+// setup cors header
+app.use(middleware.setCorsHeader);
+
+// add sequelize client to req
+app.use(middleware.setSequelize(sequelize));
 
 // body-parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// test message for home route
-app.get('/', (req, res) => res.send('Hello from code-connect server'));
+// setup custom resource routes
+logger.info({ routes: _.keys(routes) }, 'setting up all custom routes');
+_.keys(routes).forEach(route => app.use(`/${config.apiPrefix}/${route}`, routes[route]));
 
-// map all routes to proper route files
-const routes = _.keys(apiRoutes);
-logger.info({ routes }, 'setting up all api routes');
-
-routes.forEach(route => app.use(`/api/${route}`, apiRoutes[route]));
+// setup jsonapi resource routes;
+app.use('/', jsonApiRouter);
 
 // error handling middleware
-// app.use(middleware.errorHandler);
+app.use(middleware.errorHandler);
 
 const port = config.apiPort;
-app.listen(port, () => logger.info({ port }, 'server listening'));
+sequelize
+  .sync()
+  .then(() => jsonApi.start())
+  .then(() => app.listen(port, () => logger.info({ port }, 'server listening')));

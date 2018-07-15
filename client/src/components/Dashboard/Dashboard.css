@@ -1,0 +1,23 @@
+.dashboard .row {
+  margin-top: 176px; }
+  .dashboard .row .col-md-4 {
+    margin-bottom: 1.5rem; }
+    .dashboard .row .col-md-4 a {
+      text-decoration: none; }
+
+.dashboard .dashboard-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.3s linear !important;
+  box-shadow: 1px 3px 10px grey;
+  -webkit-transition: box-shadow 0.3s linear; }
+  .dashboard .dashboard-card:hover {
+    background-color: #333;
+    color: #fff; }
+  .dashboard .dashboard-card i {
+    font-size: 2rem; }

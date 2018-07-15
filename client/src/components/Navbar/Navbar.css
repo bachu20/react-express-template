@@ -1,0 +1,33 @@
+.navigation {
+  height: 176px;
+  display: flex;
+  align-items: center;
+  flex-direction: row; }
+  .navigation div {
+    flex: 1; }
+  .navigation .social-buttons {
+    font-size: 1.25rem; }
+    .navigation .social-buttons .social-button {
+      text-decoration: none; }
+      .navigation .social-buttons .social-button button {
+        display: block;
+        background: transparent;
+        margin-top: 0.5rem;
+        border: 2px solid #333;
+        transition: all 0.3s linear;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%; }
+        .navigation .social-buttons .social-button button:hover {
+          color: #fff;
+          background-color: #333; }
+  .navigation .menu {
+    transition: color 0.3s linear;
+    height: 100%; }
+    .navigation .menu .nav-icon {
+      font-size: 2.5rem;
+      box-shadow: none !important;
+      background: none !important;
+      transition: color 0.3s linear; }
+      .navigation .menu .nav-icon:hover {
+        color: #009688; }

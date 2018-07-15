@@ -1,0 +1,36 @@
+@import "../../assets/styles.scss";
+
+.dashboard {
+  .row {
+    margin-top: $navbar-height;
+
+    .col-md-4 {
+      margin-bottom: 1.5rem;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .dashboard-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $black;
+    transition: all $transition-speed linear !important;
+    @include add_hover_shadow_effect;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+
+    i {
+      font-size: 2rem;
+    }
+  }
+}

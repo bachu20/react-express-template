@@ -1,0 +1,21 @@
+@import "../../assets/styles.scss";
+
+.signin {
+  .main {
+    display: flex;
+    height: 100%;
+
+    form {
+      @include form;
+
+      hr {
+        opacity: 0;
+      }
+
+      .button {
+        text-align: right;
+      }
+    }
+  }
+
+}

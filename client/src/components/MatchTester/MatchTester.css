@@ -1,0 +1,8 @@
+.match-tester {
+  padding: 1rem 0.5rem !important; }
+  .match-tester form {
+    border: 1px solid blue;
+    padding: 2rem;
+    border: 3px solid #333; }
+  .match-tester .match.card {
+    margin-bottom: 0.5rem; }

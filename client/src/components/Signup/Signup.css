@@ -1,0 +1,82 @@
+.signup-wizard ._1, .signup-wizard ._2, .signup-wizard ._3, .signup-wizard ._4 {
+  display: flex;
+  height: 100%; }
+
+.signup-wizard ._1 {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center; }
+  .signup-wizard ._1 .role-card {
+    text-align: center;
+    margin: 1rem 0; }
+    .signup-wizard ._1 .role-card div {
+      border: 3px solid #333;
+      height: 500px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 5rem;
+      transition: all 0.3s linear; }
+      .signup-wizard ._1 .role-card div:hover {
+        background-color: #333;
+        color: #fff; }
+
+.signup-wizard ._3 .heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .signup-wizard ._3 .heading h3 {
+    flex: 9; }
+  .signup-wizard ._3 .heading h4 {
+    flex: 1;
+    text-align: right;
+    color: grey; }
+
+.signup-wizard ._3 .nav-buttons {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .signup-wizard ._3 .nav-buttons button {
+    border: 1px solid #009688;
+    margin: auto 1rem; }
+    .signup-wizard ._3 .nav-buttons button:hover {
+      background: #009688;
+      color: #fff; }
+  .signup-wizard ._3 .nav-buttons i {
+    opacity: 1; }
+    .signup-wizard ._3 .nav-buttons i.disabled {
+      opacity: 0; }
+
+.signup-wizard ._4 .col-1 i {
+  font-size: 1.5rem;
+  transition: color 0.3s linear; }
+  .signup-wizard ._4 .col-1 i:hover {
+    color: #42DCA3; }
+
+.signup-wizard ._4 input {
+  padding: 1.5rem 0; }
+
+.signup-wizard ._4 button {
+  border: 1px solid #009688; }
+  .signup-wizard ._4 button:hover {
+    background: #009688;
+    color: #fff; }
+
+.signup-wizard form {
+  width: 768px;
+  margin: auto;
+  padding: 2rem;
+  box-shadow: 1px 3px 10px grey;
+  -webkit-transition: box-shadow 0.3s linear; }
+  .signup-wizard form .form-row {
+    padding: 1rem 0; }
+  .signup-wizard form .button {
+    text-align: right; }
+    .signup-wizard form .button button {
+      border: 1px solid #009688; }
+      .signup-wizard form .button button:hover {
+        background: #009688;
+        color: #fff; }

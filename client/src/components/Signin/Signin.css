@@ -1,0 +1,22 @@
+.signin .main {
+  display: flex;
+  height: 100%; }
+  .signin .main form {
+    width: 768px;
+    margin: auto;
+    padding: 2rem;
+    box-shadow: 1px 3px 10px grey;
+    -webkit-transition: box-shadow 0.3s linear; }
+    .signin .main form .form-row {
+      padding: 1rem 0; }
+    .signin .main form .button {
+      text-align: right; }
+      .signin .main form .button button {
+        border: 1px solid #009688; }
+        .signin .main form .button button:hover {
+          background: #009688;
+          color: #fff; }
+    .signin .main form hr {
+      opacity: 0; }
+    .signin .main form .button {
+      text-align: right; }

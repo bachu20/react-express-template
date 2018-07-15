@@ -1,0 +1,41 @@
+.profile .main {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center; }
+
+.profile .profile-card {
+  box-shadow: 1px 3px 10px grey;
+  -webkit-transition: box-shadow 0.3s linear;
+  padding: 0; }
+  .profile .profile-card .col-lg-6 {
+    padding: 0; }
+  .profile .profile-card .details {
+    min-height: 330px;
+    padding: 1rem;
+    text-align: center; }
+    .profile .profile-card .details h3 {
+      font-size: 3.5rem;
+      font-weight: bolder; }
+    .profile .profile-card .details h6 {
+      font-size: 0.9rem; }
+    .profile .profile-card .details hr {
+      margin: 1.5rem 0; }
+    .profile .profile-card .details .extra h4 {
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #818a91; }
+    .profile .profile-card .details .extra p {
+      font-size: 1.5rem;
+      font-weight: 300; }
+    .profile .profile-card .details .extra .bio {
+      margin-top: 2rem; }
+      .profile .profile-card .details .extra .bio p {
+        font-size: 0.9rem; }
+  .profile .profile-card .button button {
+    border: 1px solid #009688;
+    width: 80%;
+    padding: 1rem; }
+    .profile .profile-card .button button:hover {
+      background: #009688;
+      color: #fff; }
