@@ -1,0 +1,45 @@
+{
+  "name": "react-express-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "bin": {
+    "react-express-template": "migration_template.js"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "jsonapi-server": "^4.2.0",
+    "lodash": "^4.17.11",
+    "pg": "^7.7.1",
+    "pg-hstore": "^2.3.2",
+    "pino": "^5.10.1",
+    "pluralize": "^7.0.0",
+    "semantic-ui-react": "^0.84.0",
+    "sequelize": "^4.41.2",
+    "sequelize-cli": "^5.4.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bachu20/react-express-template.git"
+  },
+  "author": "Brandon Achu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bachu20/react-express-template/issues"
+  },
+  "homepage": "https://github.com/bachu20/react-express-template#readme"
+}

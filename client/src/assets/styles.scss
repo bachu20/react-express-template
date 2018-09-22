@@ -1,0 +1,118 @@
+// Color Pallete
+// Primary
+$teal: #42DCA3;
+$green: #009688;
+
+// Neutral
+$black: #333;
+$white: #fff;
+$grey: #818a91;
+
+// Social Networks
+$instagram: #4263eb;
+$facebook: #3b5998;
+$twitter: #55acee;
+$youtube: #e52d27;
+$linkedin: #0077b5;
+
+// Sizing
+$default-border-size: 3px;
+
+// animations
+$transition-speed: 0.3s;
+
+// Breakpoints
+$s_devices: 576px;
+$m_devices: 768px;
+$l_devices: 992px;
+$xl_devices: 1200px;
+$xxl_devices: 1500px;
+$xxxl_devices: 1600px;
+
+// component styles
+$navbar-height: 176px;
+$fullscreen-height: calc(100vh - #{$navbar-height});
+$max-container-width: $xxxl_devices;
+
+// styles
+@mixin form {
+    width: $m_devices;
+    margin: auto;
+    padding: 2rem;
+    @include add_hover_shadow_effect;
+
+    .form-row {
+      padding: 1rem 0;
+    }
+
+    .button {
+      text-align: right;
+
+      button {
+        @include form-button;
+      }
+    }
+}
+
+@mixin form-button {
+    border: 1px solid $green;
+
+    &:hover {
+        background: $green;
+        color: $white;
+    }
+}
+
+// Mixins
+@mixin breakpoint($size, $direction: min) {
+    @if $direction == min {
+        @media (min-width: $size)  { @content; }
+    }
+    @else if $direction == max {
+        @media (max-width: $size)  { @content; }
+    }
+}
+
+@mixin overlay($background: rgba(0,0,0,0.5)) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $background;
+}
+
+@mixin abs-pos($ref: top, $v: 50%, $h: 50%) {
+    @if $ref == top {
+        top: $v;
+        left: $h;
+        transform: translate(-$h, -$v);
+    }
+    @else if $ref == bottom {
+        bottom: $v;
+        left: $h;
+        transform: translate(-$h, -$v);
+    }
+}
+
+@mixin make-circular($height) {
+    height: $height;
+    width: $height;
+    border-radius: 50%;
+}
+
+@mixin add_hover_shadow_effect() {
+    box-shadow: 1px 3px 10px grey;
+    -webkit-transition:  box-shadow $transition-speed linear;
+}
+
+@mixin add_background_image($image) {
+    background-image: url($image);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
